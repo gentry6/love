@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>love</title>
+    <style>
+        .typed-cursor {
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+        
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+        
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .typed-fade-out {
+            opacity: 0;
+            transition: opacity .25s;
+            -webkit-animation: 0;
+            animation: 0;
+        }
+        
+        h2 {
+            color: brown;
+        }
+    </style>
+    <div id="element"></div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+    <script type="text/javascript">
+        var option = {
+                strings: ["<h2>想牵你的手，敬各方来宾的酒</h2>", "<h2>I love you</h2>", '<h2>只要你要，只要我有<h2>'],
+                typeSpeed: 100
+            }
+            // console.log(new start());
+
+        var typed = new Typed("#element", option);
+    </script>
+
+</head>
+
+<body>
+    <div id="element"></div>
+</body>
+
+</html>

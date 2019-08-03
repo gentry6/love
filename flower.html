@@ -6,11 +6,58 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>flower</title>
-
+    <style>
+        .container {
+            display: flex;
+            border: solid 1px #eee;
+        }
+        
+        .typed-cursor {
+            opacity: 0;
+            animation: typedjsBlink 0.7s infinite;
+            -webkit-animation: typedjsBlink 0.7s infinite;
+            animation: typedjsBlink 0.7s infinite;
+        }
+        
+        @keyframes typedjsBlink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+        
+        @-webkit-keyframes typedjsBlink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .typed-fade-out {
+            opacity: 0;
+            transition: opacity .25s;
+            -webkit-animation: 0;
+            animation: 0;
+        }
+        
+        h2 {
+            color: brown;
+            line-height: 36px;
+        }
+    </style>
 </head>
 
 <body>
-    <canvas id="c"></canvas>
+    <div class="container">
+        <canvas id="c"></canvas>
+        <div id="element"></div>
+    </div>
+
+
 </body>
 <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
 <script>
@@ -49,6 +96,14 @@
         }
     }
     setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
+        /* 打字效果 */
+    var option = {
+            strings: ["<h2> 馨儿，情人节快乐<br>我忘了问你的地址和电话<br>没能给你买玫瑰<br>没能陪在你的身边<br>只能以这么肤浅的方式祝福你<br>情人节快乐<br>希望你不要怪我<br>相信我，以后每一个情人节都会比这个好<br>遇见你，我就想把最好的给你<br>只要你要，只要我有<br>做我的老大吧<br>我会对你好<br>一直把你当作宝<br>我爱你<br>131420</h2>"],
+            typeSpeed: 200
+        }
+        // console.log(new start());
+
+    var typed = new Typed("#element", option);
 </script>
 
 </html>
